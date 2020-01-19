@@ -1,0 +1,105 @@
+.table{
+    border-spacing: 0;
+    color: $primary-color;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 22px;
+    &--statuses{
+        th, td{
+            &:last-child{
+                padding-right: 58px;
+            }
+        }
+        td{
+            &:last-child{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: 45px;
+                    top: calc(50% - 6.5px);
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    &--ebids{
+        th:last-child{
+            text-align: center;
+        }
+        td{
+            // &:nth-last-child(-n+2){
+            //     white-space: nowrap;
+            // }
+            &:last-child{
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $medium-gray;
+                    font-size: 14px;
+                    text-decoration: none;
+                    &:hover, &:focus{
+                        color: $alert-color;
+                        span{
+                            opacity: 1;
+                        }
+                    }
+                }
+                span{
+                    opacity: 0;
+                    transition: opacity 250ms;
+                }
+                svg{
+                    margin-left: 14px;
+                }
+            }
+        }
+    }
+    thead{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1.12px;
+        font-family: $header-font-family;
+    }
+    tr{
+        $states: (
+            accepted: $warning-color,
+            rejected: $medium-gray,
+            winner: $success-color
+        );
+        @each $state in map-keys($states) {
+            &.#{$state}{
+                @if($state == rejected) {
+                    color: map-get($states, $state);
+                }
+                td:last-child::after{
+                    background: map-get($states, $state);
+                }
+            }
+        }
+        &:hover, &:focus{
+            td{
+                background-color: $light-gray;
+            }
+        }
+    }
+    th{
+        font-weight: 400;
+        border-bottom: 1px solid #ebf1ff;
+        padding: 9px 12px;
+        &:first-child{
+            padding-left: 40px;
+        }
+    }
+    td{
+        border-bottom: 1px solid #ebf1ff;
+        padding: 14px 12px;
+        cursor: pointer;
+        transition: background-color 200ms;
+        &:first-child{
+            padding-left: 40px;
+        }
+    }
+}

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Профиль – ВТБ Бизнес Коннект</title>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="Профиль – ВТБ Бизнес Коннект">
+    <meta property="og:description" content="Description">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=bbe0229a60caa51b21e97c6a19a964fc">
+  </head>
+  <body>
+    <main class="off-canvas-content wrap" data-off-canvas-content>
+      <header class="header">
+        <button class="header_hamb" aria-label="Открыть/Закрыть меню" data-toggle="menu" aria-expanded="false" aria-controls="menu">
+          <svg class="header_hamb_icon" viewBox="0 0 100 100">
+            <path class="header_hamb_line header_hamb_line--top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+            <path class="header_hamb_line header_hamb_line--middle" d="m 30,50 h 40"></path>
+            <path class="header_hamb_line header_hamb_line--bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
+          </svg>
+        </button>
+        <div class="header_menu header_menu--main" id="menu" data-dropdown data-close-on-click="true">
+          <ul class="menu vertical menu--main">
+            <li class="active"><a href="/">Рабочий стол</a></li>
+            <li><a href="https://vtb.salex.pro">Заказы</a></li>
+            <li><a href="https://vtb.salex.pro">Товары и поставщики</a></li>
+            <li><a href="https://vtb.salex.pro/auction.html">Торги</a></li>
+            <li><a href="https://vtb.salex.pro">Каталог товаров</a></li>
+            <li><a href="https://vtb.salex.pro">Экспорт менеджер</a></li>
+            <li><a href="https://vtb.salex.pro">Академия экспорта</a></li>
+          </ul>
+        </div>
+        <div class="grid-container header_inner">
+          <div class="header_logo"><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></div>
+          <div class="header_center">
+            <ul class="header_view">
+              <li><span class="button small hollow" data-open="view">Отчеты</span></li>
+            </ul>
+            <form class="header_search" action="">
+              <input type="search" name="q" placeholder="Поиск товаров">
+              <button class="header_search_button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="13">
+                  <use fill="#5c5c5c" xlink:href="./assets/img/icons.svg#magnifier"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <ul class="header_actions">
+            <li><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="31">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet"></use>
+                </svg></a></li>
+            <li><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#bell"></use>
+                </svg></a></li>
+            <li><a href="#"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#cart"></use>
+                </svg><span class="badge">+67</span></a></li>
+            <li>
+              <button class="header_avatar" data-toggle="profile"><img src="https://placeimg.com/50/50/people" alt="Фото"></button>
+            </li>
+          </ul>
+        </div>
+        <div class="header_menu header_menu--profile" id="profile" data-dropdown data-close-on-click="true" data-alignment="right" data-h-offset="-15">
+          <div class="header_profile">
+            <div class="header_avatar"><img src="https://placeimg.com/64/64/people" alt="Фото"></div>
+            <p class="header_profile_name">Константин Константинопольский</p>
+          </div>
+          <ul class="menu vertical menu--profile">
+            <li><a href="#">ООО “Ромашка”</a></li>
+            <li><a href="#">Настройки</a></li>
+            <li><a href="#" data-open="view">Изменить вид</a></li>
+            <li><a href="#">Справка</a></li>
+            <li><a href="#">Выход</a></li>
+          </ul>
+        </div>
+      </header>
+      <section class="content grid-container">
+        <div class="content_top">
+          <div class="block block--promo">
+            <h2 class="block--promo_header">Работать с ВТБ выгодно</h2>
+            <p class="subheader">Один год расчетно-кассового обслуживания бесплатно</p><a class="button" href="#">Подать заявку</a>
+          </div>
+          <div class="block block--promo">
+            <h2 class="block--promo_header">Работать с ВТБ выгодно</h2>
+            <p class="subheader">Узнай свой экспортный потенциал</p><a class="button" href="#">Попробовать</a>
+          </div>
+          <div class="block block--wallet">
+            <div class="block_header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="31">
+                <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet"></use>
+              </svg><a href="#">Пополнить</a>
+            </div>
+            <div class="block_content">
+              <div class="block_col">
+                <h4>баланс</h4><b class="block_sum">127 000  000₽</b>
+              </div>
+              <div class="block_col">
+                <h4>холдировано</h4><b class="block_sum">217 802 ₽</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Торги в моих категориях</h3>
+            </div>
+            <div class="block_content">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>название</th>
+                    <th>окончание</th>
+                    <th>цена</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Заказ 1</td>
+                    <td>21.09.20</td>
+                    <td>7 831 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Заказ 2</td>
+                    <td>01.01.22</td>
+                    <td>326 932 083 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Заказ 3</td>
+                    <td>31.12.19</td>
+                    <td>122 931 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Заказ 4</td>
+                    <td>14.02.22</td>
+                    <td>43 231 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Заказ 5</td>
+                    <td>19.03.24</td>
+                    <td>77 923 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Мои заказы</h3>
+              <ul class="block_switcher">
+                <li>
+                  <input id="oPurchases" type="radio" name="orders">
+                  <label class="block_switcher_label" for="oPurchases">Покупки</label>
+                </li>
+                <li>
+                  <input id="oSales" type="radio" name="orders" checked>
+                  <label class="block_switcher_label" for="oSales">Продажи</label>
+                </li>
+              </ul>
+            </div>
+            <div class="block_content">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>№ Заказа</th>
+                    <th>ЦЕНА</th>
+                    <th>КОНТРАГЕНТ</th>
+                    <th>статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>113762-А</td>
+                    <td>44 911 ₽</td>
+                    <td>Банк ВТБ</td>
+                    <td>Подписан</td>
+                  </tr>
+                  <tr>
+                    <td>9312-М</td>
+                    <td>42 210 ₽</td>
+                    <td>Северсталь</td>
+                    <td>Отправлен</td>
+                  </tr>
+                  <tr>
+                    <td>810238-С</td>
+                    <td>76 912 ₽</td>
+                    <td>Техномаш</td>
+                    <td>Отправлен</td>
+                  </tr>
+                  <tr>
+                    <td>90213-А</td>
+                    <td>90 834 ₽</td>
+                    <td>КамАЗ</td>
+                    <td>На доработке</td>
+                  </tr>
+                  <tr>
+                    <td>932891-А</td>
+                    <td>01 022 ₽</td>
+                    <td>Embacy</td>
+                    <td>На доработке</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Торги</h3>
+              <ul class="block_switcher">
+                <li>
+                  <input id="bMine" type="radio" name="bids" checked>
+                  <label class="block_switcher_label" for="bMine">Мои</label>
+                </li>
+                <li>
+                  <input id="bCompany" type="radio" name="bids">
+                  <label class="block_switcher_label" for="bCompany">Моей компании</label>
+                </li>
+                <li>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#plus"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="block_content">
+              <table class="table table--statuses">
+                <thead>
+                  <tr>
+                    <th>название</th>
+                    <th>окончание</th>
+                    <th>статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="winner">
+                    <td>Транспортные услуги</td>
+                    <td>21.09.20</td>
+                    <td>Победитель</td>
+                  </tr>
+                  <tr class="accepted">
+                    <td>Квартира в г. Москве</td>
+                    <td>01.01.22</td>
+                    <td>Принят</td>
+                  </tr>
+                  <tr class="rejected">
+                    <td>Печатная продукция</td>
+                    <td>31.12.19</td>
+                    <td>Отклонен</td>
+                  </tr>
+                  <tr class="rejected">
+                    <td>Интерактивные панели</td>
+                    <td>14.02.22</td>
+                    <td>Отклонен</td>
+                  </tr>
+                  <tr class="accepted">
+                    <td>Поставка угля</td>
+                    <td>19.03.24</td>
+                    <td>Принят</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Мои документы</h3>
+              <ul class="block_switcher">
+                <li>
+                  <input id="dAll" type="radio" name="docs">
+                  <label class="block_switcher_label" for="dAll">все</label>
+                </li>
+                <li>
+                  <input id="dInbox" type="radio" name="docs" checked>
+                  <label class="block_switcher_label" for="dInbox">Входящие</label>
+                </li>
+                <li>
+                  <input id="dOutbox" type="radio" name="docs">
+                  <label class="block_switcher_label" for="dOutbox">Исходящие</label>
+                </li>
+                <li>
+                  <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="21">
+                      <use fill="currentColor" xlink:href="./assets/img/icons.svg#plus"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="block_content">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>№ Заказа</th>
+                    <th>№ документа</th>
+                    <th>Получатель</th>
+                    <th>статус</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>113762-А</td>
+                    <td>44 911</td>
+                    <td>Банк ВТБ</td>
+                    <td>Подписан</td>
+                  </tr>
+                  <tr>
+                    <td>9312-М</td>
+                    <td>42 210</td>
+                    <td>Северсталь</td>
+                    <td>Отправлен</td>
+                  </tr>
+                  <tr>
+                    <td>810238-С</td>
+                    <td>76 912</td>
+                    <td>Техномаш</td>
+                    <td>Отправлен</td>
+                  </tr>
+                  <tr>
+                    <td>90213-А</td>
+                    <td>90 834</td>
+                    <td>КамАЗ</td>
+                    <td>На доработке</td>
+                  </tr>
+                  <tr>
+                    <td>932891-А</td>
+                    <td>01 022</td>
+                    <td>Embacy</td>
+                    <td>На доработке</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Мои заказы</h3>
+            </div>
+            <div class="block_content">
+              <ul class="block_orders">
+                <li class="block_orders_item">
+                  <p class="h4">в обработке</p><span class="block_sum block_sum--large">47 826</span>
+                </li>
+                <li class="block_orders_item">
+                  <p class="h4">зарезервированно<span class="badge">+67</span></p><span class="block_sum block_sum--large">169 013</span>
+                </li>
+                <li class="block_orders_item">
+                  <p class="h4">оплаченно</p><span class="block_sum block_sum--large">169 013</span>
+                </li>
+                <li class="block_orders_item">
+                  <p class="h4">подписано<span class="badge">+24</span></p><span class="block_sum block_sum--large">365</span>
+                </li>
+                <li class="block_orders_item">
+                  <p class="h4">ОТГРУЖЕННО</p><span class="block_sum block_sum--large">912</span>
+                </li>
+                <li class="block_orders_item">
+                  <p class="h4">всего заказов<span class="badge">+34</span></p><span class="block_sum block_sum--large">912</span>
+                </li>
+              </ul>
+              <ul class="block_statuses">
+                <li class="block_statuses_item">
+                  <p class="h4">Выполненно</p><span class="block_sum block_sum--large">172</span>
+                </li>
+                <li class="block_statuses_item">
+                  <p class="h4">отмененно</p><span class="block_sum block_sum--large">77</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Завершенные торги</h3>
+              <ul class="block_switcher">
+                <li>
+                  <input id="beMine" type="radio" name="bids_ended">
+                  <label class="block_switcher_label" for="beMine">Мои</label>
+                </li>
+                <li>
+                  <input id="beCompany" type="radio" name="bids_ended" checked>
+                  <label class="block_switcher_label" for="beCompany">Моей компании</label>
+                </li>
+              </ul>
+            </div>
+            <div class="block_content">
+              <table class="table table--ebids">
+                <thead>
+                  <tr>
+                    <th>Название</th>
+                    <th>цена победителя</th>
+                    <th>протокол</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Мониторы LGD 27″</td>
+                    <td>999 000 000 ₽</td>
+                    <td><a href="#" download><span>Скачать</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#pdf"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>ноутбуки apple’13</td>
+                    <td><a href="#">Выбрать победителя</a></td>
+                    <td><a href="#" download><span>Скачать</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#pdf"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>honda civic’14</td>
+                    <td>700 000 ₽</td>
+                    <td><a href="#" download><span>Скачать</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#pdf"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>пшеница с длинным названием</td>
+                    <td>43 000 000 ₽</td>
+                    <td><a href="#" download><span>Скачать</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#pdf"></use>
+                        </svg></a></td>
+                  </tr>
+                  <tr>
+                    <td>Трактор беларусь</td>
+                    <td>274 ₽</td>
+                    <td><a href="#" download><span>Скачать</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="23">
+                          <use fill="currentColor" xlink:href="./assets/img/icons.svg#pdf"></use>
+                        </svg></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="block cell large-6">
+            <div class="block_header">
+              <h3>Действующие торги</h3>
+              <ul class="block_switcher">
+                <li>
+                  <input id="bexMine" type="radio" name="bids_exist">
+                  <label class="block_switcher_label" for="bexMine">Мои</label>
+                </li>
+                <li>
+                  <input id="bexCompany" type="radio" name="bids_exist" checked>
+                  <label class="block_switcher_label" for="bexCompany">Моей компании</label>
+                </li>
+              </ul>
+            </div>
+            <div class="block_content">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>описание</th>
+                    <th>срок окончания</th>
+                    <th>Участники</th>
+                    <th>лучшая цена</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Название торга</td>
+                    <td>21.09.20</td>
+                    <td>9</td>
+                    <td>381 381 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Название торга</td>
+                    <td>01.01.22</td>
+                    <td>10</td>
+                    <td>4 000 000 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Название торга</td>
+                    <td>31.12.19</td>
+                    <td>2</td>
+                    <td>139 221 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Название торга</td>
+                    <td>14.02.22</td>
+                    <td>4</td>
+                    <td>819 831 ₽</td>
+                  </tr>
+                  <tr>
+                    <td>Название торга</td>
+                    <td>19.03.24</td>
+                    <td>22</td>
+                    <td>93 928 817 ₽</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="reveal" id="view" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+      <p class="h3 reveal_header">Изменить вид</p>
+      <ul class="reveal_list">
+        <li>
+          <label><span>Заказы</span>
+            <input type="checkbox" name="view" value="orders" checked>
+          </label>
+        </li>
+        <li>
+          <label><span>Документы</span>
+            <input type="checkbox" name="view" value="docs" checked>
+          </label>
+        </li>
+        <li>
+          <label><span>Завершенные торги (Закупщику)</span>
+            <input type="checkbox" name="view" value="bids_ended" checked>
+          </label>
+        </li>
+        <li>
+          <label><span>Действующие торги (Закупщику)</span>
+            <input type="checkbox" name="view" value="bids_exist">
+          </label>
+        </li>
+        <li>
+          <label><span>Торги в моих категориях (Поставщику) </span>
+            <input type="checkbox" name="view" value="bids_cats">
+          </label>
+        </li>
+        <li>
+          <label><span>Поданные торги (Поставщику)</span>
+            <input type="checkbox" name="view" value="bids_filed">
+          </label>
+        </li>
+        <li>
+          <label><span>Заказы</span>
+            <input type="checkbox" name="view" value="orders">
+          </label>
+        </li>
+        <li>
+          <label><span>Документы</span>
+            <input type="checkbox" name="view" value="docs">
+          </label>
+        </li>
+      </ul>
+    </div>
+    <script src="./js/app.min.js?ckcachebust=da450fc81f8307b9c60ed1c0752341bd"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+header.header
+    button.header_hamb(aria-label='Открыть/Закрыть меню', data-toggle='menu', aria-expanded='false', aria-controls='menu')
+        svg.header_hamb_icon(viewBox='0 0 100 100')
+            path.header_hamb_line.header_hamb_line--top(d='m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40')
+            path.header_hamb_line.header_hamb_line--middle(d='m 30,50 h 40')
+            path.header_hamb_line.header_hamb_line--bottom(d='m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40')
+    #menu.header_menu.header_menu--main(data-dropdown data-close-on-click="true")
+        +menu()(class="vertical menu--main")
+    .grid-container.header_inner
+        .header_logo
+            img(src="./assets/img/logo.svg", alt="ВТБ Бизнес Коннект")
+        .header_center
+            ul.header_view
+                //- li
+                //-     button.button.small.hollow
+                //-         | Изменить вид
+                li
+                    span.button.small.hollow(data-open="view")
+                        | Отчеты
+            form.header_search(action="")
+                input(type="search" name="q" placeholder="Поиск товаров")
+                button.header_search_button
+                    +icon('magnifier', [14, 13], '#5c5c5c')
+        ul.header_actions
+            li
+                a(href="#")
+                    +icon('wallet', [34, 31])
+            li
+                a(href="#")
+                    +icon('bell', [31, 31])
+            li
+                a(href="#") 
+                    +icon('cart', [31, 31])
+                    span.badge
+                        | +67
+            li
+                button.header_avatar(data-toggle='profile')
+                    img(src="https://placeimg.com/50/50/people", alt="Фото")
+    #profile.header_menu.header_menu--profile(data-dropdown data-close-on-click="true" data-alignment="right" data-h-offset="-15")
+        .header_profile
+            .header_avatar
+                img(src="https://placeimg.com/64/64/people", alt="Фото")
+            p.header_profile_name
+                | Константин Константинопольский
+        +menu([
+            {
+                title: 'ООО “Ромашка”'
+            },
+            {
+                title: 'Настройки'
+            },
+            {
+                title: 'Изменить вид',
+                attrs: {
+                    'data-open': 'view'
+                }
+            },
+            {
+                title: 'Справка'
+            },
+            {
+                title: 'Выход'
+            },
+        ])(class="vertical menu--profile")

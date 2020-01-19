@@ -1,0 +1,21 @@
+button {
+    outline: none;
+    cursor: pointer;
+}
+
+.button{
+    outline: none;
+    user-select: none;
+    font-weight: 300;
+    text-decoration: none;
+    &.hollow.hollow{
+        padding: 10px 24px;
+        color: $primary-color;
+        letter-spacing: 0.71px;
+        text-transform: uppercase;
+        font-weight: 600;
+        &:hover, &:focus{
+            color: $primary-color;
+        }
+    }
+}

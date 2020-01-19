@@ -1,0 +1,36 @@
+#view.reveal(data-reveal data-animation-in="fade-in" data-animation-out="fade-out")
+    p.h3.reveal_header
+        | Изменить вид
+    ul.reveal_list
+        li
+            label
+                span Заказы
+                input(type="checkbox" name="view" value="orders" checked)
+        li
+            label
+                span Документы
+                input(type="checkbox" name="view" value="docs" checked)
+        li
+            label
+                span Завершенные торги (Закупщику)
+                input(type="checkbox" name="view" value="bids_ended" checked)
+        li
+            label
+                span Действующие торги (Закупщику)
+                input(type="checkbox" name="view" value="bids_exist")
+        li
+            label
+                span Торги в моих категориях (Поставщику) 
+                input(type="checkbox" name="view" value="bids_cats")
+        li
+            label
+                span Поданные торги (Поставщику)
+                input(type="checkbox" name="view" value="bids_filed")
+        li
+            label
+                span Заказы
+                input(type="checkbox" name="view" value="orders")
+        li
+            label
+                span Документы
+                input(type="checkbox" name="view" value="docs")

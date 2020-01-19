@@ -1,0 +1,372 @@
+extends ../layouts/_main
+
+block const
+    -
+        const name = 'Профиль'
+
+block content
+    section.content.grid-container
+        .content_top
+            .block.block--promo
+                h2.block--promo_header
+                    | Работать с ВТБ выгодно
+                p.subheader
+                    | Один год расчетно-кассового обслуживания бесплатно
+                a.button(href="#")
+                    | Подать заявку
+            .block.block--promo
+                h2.block--promo_header
+                    | Работать с ВТБ выгодно
+                p.subheader
+                    | Узнай свой экспортный потенциал
+                a.button(href="#")
+                    | Попробовать
+            .block.block--wallet
+                .block_header
+                    +icon('wallet', [34, 31])
+                    a(href="#")
+                        | Пополнить
+                .block_content
+                    .block_col
+                        h4 баланс
+                        b.block_sum
+                            | 127 000  000₽
+                    .block_col
+                        h4 холдировано
+                        b.block_sum
+                            | 217 802 ₽
+        .grid-x.grid-margin-x
+            .block.cell.large-6
+                .block_header
+                    h3 Торги в моих категориях
+                .block_content
+                    table.table
+                        thead
+                            tr
+                                th название
+                                th окончание
+                                th цена
+                        tbody
+                            tr
+                                td Заказ 1
+                                td 21.09.20
+                                td 7 831 ₽
+                            tr
+                                td Заказ 2
+                                td 01.01.22
+                                td 326 932 083 ₽
+                            tr
+                                td Заказ 3
+                                td 31.12.19
+                                td 122 931 ₽
+                            tr
+                                td Заказ 4
+                                td 14.02.22
+                                td 43 231 ₽
+                            tr
+                                td Заказ 5
+                                td 19.03.24
+                                td 77 923 ₽
+            
+            .block.cell.large-6
+                .block_header
+                    h3 Мои заказы
+                    ul.block_switcher
+                        li
+                            input#oPurchases(type="radio" name="orders")
+                            label.block_switcher_label(for="oPurchases")
+                                | Покупки
+                        li
+                            input#oSales(type="radio" name="orders" checked)
+                            label.block_switcher_label(for="oSales")
+                                | Продажи
+                .block_content
+                    table.table
+                        thead
+                            tr
+                                th № Заказа
+                                th ЦЕНА
+                                th КОНТРАГЕНТ
+                                th статус
+                        tbody
+                            tr
+                                td 113762-А
+                                td 44 911 ₽
+                                td Банк ВТБ
+                                td Подписан
+                            tr
+                                td 9312-М
+                                td 42 210 ₽
+                                td Северсталь
+                                td Отправлен
+                            tr
+                                td 810238-С
+                                td 76 912 ₽
+                                td Техномаш
+                                td Отправлен
+                            tr
+                                td 90213-А
+                                td 90 834 ₽
+                                td КамАЗ
+                                td На доработке
+                            tr
+                                td 932891-А
+                                td 01 022 ₽
+                                td Embacy
+                                td На доработке
+            
+            .block.cell.large-6
+                .block_header
+                    h3 Торги
+                    ul.block_switcher
+                        li
+                            input#bMine(type="radio" name="bids" checked)
+                            label.block_switcher_label(for="bMine")
+                                | Мои
+                        li
+                            input#bCompany(type="radio" name="bids")
+                            label.block_switcher_label(for="bCompany")
+                                | Моей компании
+                        li
+                            button
+                                +icon('plus', [22, 21])
+                .block_content
+                    table.table.table--statuses
+                        thead
+                            tr
+                                th название
+                                th окончание
+                                th статус
+                        tbody
+                            tr.winner
+                                td Транспортные услуги
+                                td 21.09.20
+                                td Победитель
+                            tr.accepted
+                                td Квартира в г. Москве
+                                td 01.01.22
+                                td Принят
+                            tr.rejected
+                                td Печатная продукция
+                                td 31.12.19
+                                td Отклонен
+                            tr.rejected
+                                td Интерактивные панели
+                                td 14.02.22
+                                td Отклонен
+                            tr.accepted
+                                td Поставка угля
+                                td 19.03.24
+                                td Принят
+                        
+            .block.cell.large-6
+                .block_header
+                    h3 Мои документы
+                    ul.block_switcher
+                        li
+                            input#dAll(type="radio" name="docs")
+                            label.block_switcher_label(for="dAll")
+                                | все
+                        li
+                            input#dInbox(type="radio" name="docs" checked)
+                            label.block_switcher_label(for="dInbox")
+                                | Входящие
+                        li
+                            input#dOutbox(type="radio" name="docs")
+                            label.block_switcher_label(for="dOutbox")
+                                | Исходящие
+                        li
+                            button
+                                +icon('plus', [22, 21])
+                .block_content
+                    table.table
+                        thead
+                            tr
+                                th № Заказа
+                                th № документа
+                                th Получатель
+                                th статус
+                        tbody
+                            tr
+                                td 113762-А
+                                td 44 911
+                                td Банк ВТБ
+                                td Подписан
+                            tr
+                                td 9312-М
+                                td 42 210
+                                td Северсталь
+                                td Отправлен
+                            tr
+                                td 810238-С
+                                td 76 912
+                                td Техномаш
+                                td Отправлен
+                            tr
+                                td 90213-А
+                                td 90 834
+                                td КамАЗ
+                                td На доработке
+                            tr
+                                td 932891-А
+                                td 01 022
+                                td Embacy
+                                td На доработке
+            
+            .block.cell.large-6
+                .block_header
+                    h3 Мои заказы
+                .block_content
+                    ul.block_orders
+                        li.block_orders_item
+                            p.h4
+                                | в обработке
+                            span.block_sum.block_sum--large
+                                | 47 826
+                        li.block_orders_item
+                            p.h4
+                                | зарезервированно
+                                span.badge
+                                    | +67
+                            span.block_sum.block_sum--large
+                                | 169 013
+                        li.block_orders_item
+                            p.h4
+                                | оплаченно
+                            span.block_sum.block_sum--large
+                                | 169 013
+                        li.block_orders_item
+                            p.h4
+                                | подписано
+                                span.badge
+                                    | +24
+                            span.block_sum.block_sum--large
+                                | 365
+                        li.block_orders_item
+                            p.h4
+                                | ОТГРУЖЕННО
+                            span.block_sum.block_sum--large
+                                | 912
+                        li.block_orders_item
+                            p.h4
+                                | всего заказов
+                                span.badge
+                                    | +34
+                            span.block_sum.block_sum--large
+                                | 912
+                    ul.block_statuses
+                        li.block_statuses_item
+                            p.h4
+                                | Выполненно
+                            span.block_sum.block_sum--large
+                                | 172
+                        li.block_statuses_item
+                            p.h4
+                                | отмененно
+                            span.block_sum.block_sum--large
+                                | 77
+
+            .block.cell.large-6
+                .block_header
+                    h3 Завершенные торги
+                    ul.block_switcher
+                        li
+                            input#beMine(type="radio" name="bids_ended")
+                            label.block_switcher_label(for="beMine")
+                                | Мои
+                        li
+                            input#beCompany(type="radio" name="bids_ended" checked)
+                            label.block_switcher_label(for="beCompany")
+                                | Моей компании
+                .block_content
+                    table.table.table--ebids
+                        thead
+                            tr
+                                th Название
+                                th цена победителя
+                                th протокол
+                        tbody
+                            tr
+                                td Мониторы LGD 27″
+                                td 999 000 000 ₽
+                                td
+                                    a(href="#" download)
+                                        span Скачать
+                                        +icon('pdf', [24, 23])
+                            tr
+                                td ноутбуки apple’13
+                                td
+                                    a(href="#")
+                                        | Выбрать победителя
+                                td
+                                    a(href="#" download)
+                                        span Скачать
+                                        +icon('pdf', [24, 23])
+                            tr
+                                td honda civic’14
+                                td 700 000 ₽
+                                td
+                                    a(href="#" download)
+                                        span Скачать
+                                        +icon('pdf', [24, 23])
+                            tr
+                                td пшеница с длинным названием
+                                td 43 000 000 ₽
+                                td
+                                    a(href="#" download)
+                                        span Скачать
+                                        +icon('pdf', [24, 23])
+                            tr
+                                td Трактор беларусь
+                                td 274 ₽
+                                td
+                                    a(href="#" download)
+                                        span Скачать
+                                        +icon('pdf', [24, 23]).
+            
+            .block.cell.large-6
+                .block_header
+                    h3 Действующие торги
+                    ul.block_switcher
+                        li
+                            input#bexMine(type="radio" name="bids_exist")
+                            label.block_switcher_label(for="bexMine")
+                                | Мои
+                        li
+                            input#bexCompany(type="radio" name="bids_exist" checked)
+                            label.block_switcher_label(for="bexCompany")
+                                | Моей компании
+                .block_content
+                    table.table
+                        thead
+                            tr
+                                th описание
+                                th срок окончания
+                                th Участники
+                                th лучшая цена
+                        tbody
+                            tr
+                                td Название торга
+                                td 21.09.20
+                                td 9
+                                td 381 381 ₽
+                            tr
+                                td Название торга
+                                td 01.01.22
+                                td 10
+                                td 4 000 000 ₽
+                            tr
+                                td Название торга
+                                td 31.12.19
+                                td 2
+                                td 139 221 ₽
+                            tr
+                                td Название торга
+                                td 14.02.22
+                                td 4
+                                td 819 831 ₽
+                            tr
+                                td Название торга
+                                td 19.03.24
+                                td 22
+                                td 93 928 817 ₽

@@ -1,0 +1,48 @@
+mixin menu(data)
+    - 
+        data = data || [
+            {
+                icon: ['clip', [21, 20]],
+                title: 'Рабочий стол',
+                link: '/',
+                is_active: true
+            },
+            {
+                icon: ['package', [20, 20]],
+                title: 'Заказы',
+                link: 'https://vtb.salex.pro'
+            },
+            {
+                icon: ['barcode', [18, 20]],
+                title: 'Товары и поставщики',
+                link: 'https://vtb.salex.pro'
+            },
+            {
+                icon: ['magazine', [18, 20]],
+                title: 'Торги',
+                link: 'https://vtb.salex.pro/auction.html'
+            },
+            {
+                icon: ['package_up', [18, 22]],
+                title: 'Каталог товаров',
+                link: 'https://vtb.salex.pro'
+            },
+            {
+                icon: ['hat', [25, 20]],
+                title: 'Экспорт менеджер',
+                link: 'https://vtb.salex.pro'
+            },
+            {
+                icon: ['documents', [18, 22]],
+                title: 'Академия экспорта',
+                link: 'https://vtb.salex.pro'
+            },
+        ]
+
+    ul.menu&attributes(attributes)
+        each item, i in data
+            li(class=item.is_active ? 'active' : '')
+                a(href=item.link || '#')&attributes(item.attrs)
+                    //- .menu_icon
+                        +icon(...item.icon)
+                    =item.title

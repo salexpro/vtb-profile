@@ -1,0 +1,20 @@
+block const
+-
+    const title  = `${name ?  `${name} – ` : ''}ВТБ Бизнес Коннект`;
+    const descr  = 'Description';
+    const domain = 'profile.vtb.salex.pro'
+
+//- Components
+include ../components/_icons
+include ../components/_menu
+
+doctype html
+html(lang="ru")
+    include ../components/_head
+    body
+        main.off-canvas-content.wrap(data-off-canvas-content)
+            include ../sections/_header
+            block content
+        include ../components/_popup
+        block js
+            script(src="./js/app.min.js")
