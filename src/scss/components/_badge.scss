@@ -6,4 +6,9 @@
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: 1.12px;
+    @include breakpoint(small down){
+        left: calc(100% - 10px);
+        font-size: 10px;
+        padding: 0 2px;
+    }
 }

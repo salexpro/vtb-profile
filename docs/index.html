@@ -12,18 +12,11 @@
     <meta property="og:title" content="Профиль – ВТБ Бизнес Коннект">
     <meta property="og:description" content="Description">
     <meta property="og:type" content="website">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=bbe0229a60caa51b21e97c6a19a964fc">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=49504796d249f5d0de932218c2dd2ff3">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
       <header class="header">
-        <button class="header_hamb" aria-label="Открыть/Закрыть меню" data-toggle="menu" aria-expanded="false" aria-controls="menu">
-          <svg class="header_hamb_icon" viewBox="0 0 100 100">
-            <path class="header_hamb_line header_hamb_line--top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
-            <path class="header_hamb_line header_hamb_line--middle" d="m 30,50 h 40"></path>
-            <path class="header_hamb_line header_hamb_line--bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
-          </svg>
-        </button>
         <div class="header_menu header_menu--main" id="menu" data-dropdown data-close-on-click="true">
           <ul class="menu vertical menu--main">
             <li class="active"><a href="/">Рабочий стол</a></li>
@@ -36,6 +29,13 @@
           </ul>
         </div>
         <div class="grid-container header_inner">
+          <button class="header_hamb" aria-label="Открыть/Закрыть меню" data-toggle="menu" aria-expanded="false" aria-controls="menu">
+            <svg class="header_hamb_icon" viewBox="0 0 100 100">
+              <path class="header_hamb_line header_hamb_line--top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+              <path class="header_hamb_line header_hamb_line--middle" d="m 30,50 h 40"></path>
+              <path class="header_hamb_line header_hamb_line--bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
+            </svg>
+          </button>
           <div class="header_logo"><img src="./assets/img/logo.svg" alt="ВТБ Бизнес Коннект"></div>
           <div class="header_center">
             <ul class="header_view">
@@ -51,6 +51,10 @@
             </form>
           </div>
           <ul class="header_actions">
+            <li class="header_actions_search"><a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27">
+                  <use fill="currentColor" xlink:href="./assets/img/icons.svg#magnifier"></use>
+                </svg></a></li>
             <li><a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="31">
                   <use fill="currentColor" xlink:href="./assets/img/icons.svg#wallet"></use>
@@ -341,29 +345,29 @@
               </table>
             </div>
           </div>
-          <div class="block cell large-6">
+          <div class="block cell large-6 hide show-for-medium">
             <div class="block_header">
               <h3>Мои заказы</h3>
             </div>
             <div class="block_content">
               <ul class="block_orders">
                 <li class="block_orders_item">
-                  <p class="h4">в обработке</p><span class="block_sum block_sum--large">47 826</span>
+                  <p class="h4"><span>в обработке</span></p><span class="block_sum block_sum--large">47 826</span>
                 </li>
                 <li class="block_orders_item">
-                  <p class="h4">зарезервированно<span class="badge">+67</span></p><span class="block_sum block_sum--large">169 013</span>
+                  <p class="h4"><span>зарезервированно</span><span class="badge">+67</span></p><span class="block_sum block_sum--large">169 013</span>
                 </li>
                 <li class="block_orders_item">
-                  <p class="h4">оплаченно</p><span class="block_sum block_sum--large">169 013</span>
+                  <p class="h4"><span>оплаченно</span></p><span class="block_sum block_sum--large">169 013</span>
                 </li>
                 <li class="block_orders_item">
-                  <p class="h4">подписано<span class="badge">+24</span></p><span class="block_sum block_sum--large">365</span>
+                  <p class="h4"><span>подписано</span><span class="badge">+24</span></p><span class="block_sum block_sum--large">365</span>
                 </li>
                 <li class="block_orders_item">
-                  <p class="h4">ОТГРУЖЕННО</p><span class="block_sum block_sum--large">912</span>
+                  <p class="h4"><span>ОТГРУЖЕННО</span></p><span class="block_sum block_sum--large">912</span>
                 </li>
                 <li class="block_orders_item">
-                  <p class="h4">всего заказов<span class="badge">+34</span></p><span class="block_sum block_sum--large">912</span>
+                  <p class="h4"><span>всего заказов</span><span class="badge">+34</span></p><span class="block_sum block_sum--large">912</span>
                 </li>
               </ul>
               <ul class="block_statuses">
@@ -551,6 +555,6 @@
         </li>
       </ul>
     </div>
-    <script src="./js/app.min.js?ckcachebust=da450fc81f8307b9c60ed1c0752341bd"></script>
+    <script src="./js/app.min.js?ckcachebust=f44b17b072f84e6a18c16040b09d726c"></script>
   </body>
 </html>

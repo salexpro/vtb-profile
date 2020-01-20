@@ -140,29 +140,21 @@ $header-lineheight: 1.1;
 $header-margin-bottom: 0;
 $header-styles: (
   small: (
-    'h1': ('fs': 14),
-    'h2': ('fs': 18, 'lh': 1.35),
-    'h3': ('fs': 13),
-    'h4': ('fs': 18),
-    'h5': ('fs': 17),
-    'h6': ('fs': 16),
-  ),
+    'h2': ('fs': 20, 'mb': 8),
+    'h3': ('fs': 18, 'lh': 2.5),
+    'h4': ('fs': 13, 'mb': 10),
+    ),
   medium: (
-    'h1': ('fs': 16),
-    'h2': ('fs': 21),
-    'h3': ('fs': 14),
-    'h4': ('fs': 25),
-    'h5': ('fs': 20),
-    'h6': ('fs': 16),
+    'h3': ('fs': 24, 'lh': 1.1),
+    'h4': ('fs': 14, 'lh': 1.1),
   ),
   large: (
-    'h1': ('fs': 18),
+    'h3': ('fs': 20),
+  ),
+  xxlarge: (
     'h2': ('fs': 30, 'lh': 2.1),
     'h3': ('fs': 24),
-    'h4': ('fs': 14, 'lh': 1.1, 'mb': 10),
-    'h5': ('fs': 20),
-    'h6': ('fs': 16),
-  ),
+  )
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
@@ -863,8 +855,7 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 12;
 $grid-margin-gutters: (
-  small: 20px,
-  medium: 30px,
+  small: 30px,
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $block-grid-max: 8;

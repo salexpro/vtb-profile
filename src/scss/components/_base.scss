@@ -29,7 +29,7 @@ html, body{
 :-webkit-autofill:hover,
 :-webkit-autofill:focus,
 :-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0px 1000px $white inset;
+    -webkit-box-shadow: 0 0 0px 1000px $secondary-color inset;
     transition: background-color 5000s ease-in-out 0s;
     -webkit-text-fill-color: $black;
 }
@@ -58,10 +58,28 @@ svg{
     width: 100%;
     padding-top: 50px;
     padding-bottom: 54px;
+    @include breakpoint(medium down){
+        padding-top: 32px;
+        padding-bottom: 36px;
+    }
+    @include breakpoint(small down){
+        padding-top: 24px;
+    }
     &_top{
         display: grid;
         grid-template-columns: 4fr 4fr 3fr;
         column-gap: 30px;
+        @include breakpoint(xlarge down){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint(medium down){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+        }
+        @include breakpoint(small down){
+            display: flex;
+            flex-direction: column-reverse;
+        }
     }
 }
 
@@ -76,14 +94,22 @@ h4, .h4{
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1.12px;
+    span{
+        &:not(.badge){
+            margin-right: 8px;
+        }
+    }
     .badge{
         position: static;
-        margin-left: 8px;
     }
 }
 
 .subheader{
     font-size: 20px;
+    @include breakpoint(xlarge down){
+        font-size: 14px;
+        margin-bottom: 17px;
+    }
 }
 
 // select{

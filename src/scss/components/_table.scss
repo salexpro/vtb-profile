@@ -4,13 +4,130 @@
     width: 100%;
     text-align: left;
     margin-bottom: 22px;
+    @include breakpoint(small down){
+        margin: 0;
+    }
+    thead{
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1.12px;
+        font-family: $header-font-family;
+        @include breakpoint(small down){
+            font-size: 11px;
+        }
+    }
+    tbody{
+        @include breakpoint(xlarge down){
+            font-size: 18px;
+        }
+        @include breakpoint(small down){
+            font-size: 14px;   
+        }
+    }
+    tr{
+        $states: (
+            accepted: $warning-color,
+            rejected: $medium-gray,
+            winner: $success-color
+        );
+        @each $state in map-keys($states) {
+            &.#{$state}{
+                @if($state == rejected) {
+                    color: map-get($states, $state);
+                }
+                td{
+                    &:first-child::after{
+                        @include breakpoint(small down){
+                            background: map-get($states, $state);
+                        }
+                    }
+                    &:last-child::after{
+                        background: map-get($states, $state);
+                    }
+                }
+            }
+        }
+        &:hover, &:focus{
+            td{
+                background-color: $light-gray;
+            }
+        }
+        &:last-child td{
+            @include breakpoint(small down){
+                border: 0;
+            }
+        }
+    }
+    th{
+        font-weight: 400;
+        border-bottom: 1px solid #ebf1ff;
+        padding: 9px 12px;
+        @include breakpoint(small down){
+            padding: 10px;
+        }
+        &:first-child{
+            padding-left: 40px;
+            @include breakpoint(xlarge down){
+                padding-left: 20px;
+            }
+            @include breakpoint(small down){
+                padding-left: 12px;
+            }
+        }
+        &:nth-child(4){
+            @include breakpoint(small down){
+                display: none;
+            }
+        }
+    }
+    td{
+        border-bottom: 1px solid #ebf1ff;
+        padding: 14px 12px;
+        cursor: pointer;
+        transition: background-color 200ms;
+        &:first-child{
+            padding-left: 40px;
+            @include breakpoint(xlarge down){
+                padding-left: 20px;
+            }
+            @include breakpoint(small down){
+                padding-left: 12px;
+            }
+        }
+        &:nth-child(4){
+            @include breakpoint(small down){
+                display: none;
+            }
+        }
+    }
     &--statuses{
         th, td{
             &:last-child{
                 padding-right: 58px;
+                @include breakpoint(xlarge down){
+                    padding-right: 40px;
+                }
+                @include breakpoint(small down){
+                    display: none;
+                }
             }
         }
         td{
+            &:first-child{
+                @include breakpoint(small down){
+                    padding-left: 32px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 11px;
+                        top: calc(50% - 6.5px);
+                        width: 13px;
+                        height: 13px;
+                        border-radius: 50%;
+                    }
+                }
+            }
             &:last-child{
                 position: relative;
                 &::after{
@@ -21,18 +138,25 @@
                     width: 13px;
                     height: 13px;
                     border-radius: 50%;
+                    @include breakpoint(xlarge down){
+                        right: 25px;
+                    }
                 }
             }
         }
     }
     &--ebids{
+        th, td{
+            &:nth-child(2){
+                @include breakpoint(small down){
+                    display: none;
+                }
+            }
+        }
         th:last-child{
             text-align: center;
         }
         td{
-            // &:nth-last-child(-n+2){
-            //     white-space: nowrap;
-            // }
             &:last-child{
                 a {
                     display: flex;
@@ -55,51 +179,6 @@
                     margin-left: 14px;
                 }
             }
-        }
-    }
-    thead{
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 1.12px;
-        font-family: $header-font-family;
-    }
-    tr{
-        $states: (
-            accepted: $warning-color,
-            rejected: $medium-gray,
-            winner: $success-color
-        );
-        @each $state in map-keys($states) {
-            &.#{$state}{
-                @if($state == rejected) {
-                    color: map-get($states, $state);
-                }
-                td:last-child::after{
-                    background: map-get($states, $state);
-                }
-            }
-        }
-        &:hover, &:focus{
-            td{
-                background-color: $light-gray;
-            }
-        }
-    }
-    th{
-        font-weight: 400;
-        border-bottom: 1px solid #ebf1ff;
-        padding: 9px 12px;
-        &:first-child{
-            padding-left: 40px;
-        }
-    }
-    td{
-        border-bottom: 1px solid #ebf1ff;
-        padding: 14px 12px;
-        cursor: pointer;
-        transition: background-color 200ms;
-        &:first-child{
-            padding-left: 40px;
         }
     }
 }

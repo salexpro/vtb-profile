@@ -6,15 +6,34 @@
         align-items: center;
         justify-content: space-between;
         min-height: 80px;
+        padding: 0 20px;
+        @include breakpoint(small down){
+            min-height: 55px;
+            padding: 0 15px;
+        }
     }
     &_logo{
-
+        @include breakpoint(medium down){
+            max-width: 152px;
+        }
+        @include breakpoint(small down){
+            margin-right: auto;
+            max-width: 108px;
+        }
     }
     &_center{
         display: grid;
         grid-template-columns: auto minmax(200px, 310px);
         column-gap: 20px;
         padding: 0 30px;
+        margin: auto;
+        @include breakpoint(medium down){
+            display: block;
+            padding: 0 10px;
+        }
+        @include breakpoint(small down){
+            display: none;
+        }
     }
     &_view{
         margin: 0;
@@ -38,6 +57,9 @@
         width: 100%;
         max-width: 310px;
         position: relative;
+        @include breakpoint(medium down){
+            display: none;
+        }
         input{
             padding-left: 35px;
         }
@@ -47,30 +69,58 @@
             top: 0;
             padding: 11.5px;
             color: #8f9399;
-            @include breakpoint(medium down){
-                padding: 9px 4px;
-                width: 22px;
-                svg{
-                    width: 100%;
-                    height: auto;
-                }
-            }
         }
     }
     &_actions{
         margin: 0;
         list-style: none;
         display: grid;
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(3, auto) 50px;
         column-gap: 54px;
         align-items: center;
+        @include breakpoint(xlarge down){
+            column-gap: 34px;
+        }
+        @include breakpoint(medium down){
+            grid-template-columns: repeat(4, auto) 62px;
+            column-gap: 20px;
+        }
+        @include breakpoint(small down){
+            column-gap: 15px;
+            grid-template-columns: repeat(3, 18px) 35px;
+            svg{
+                height: auto;
+                max-width: 100%;
+            }
+            li:nth-child(2){
+                display: none;
+            }
+        }
+        &_search{
+            display: none;
+            @include breakpoint(medium down){
+                display: block;
+            }
+        }
         li{
             position: relative;
+        }
+    }
+    li .header_avatar{
+        @include breakpoint(medium down){
+            max-width: 46px;
+            float: right;
+        }
+        @include breakpoint(small down){
+            max-width: 30px;
         }
     }
     &_avatar{
         border-radius: 50%;
         overflow: hidden;
+        img{
+            display: block;
+        }
     }
     &_hamb{
         -webkit-tap-highlight-color: transparent;
@@ -81,6 +131,14 @@
         position: absolute;
         left: 0;
         top: calc(50% - 36px);
+        @include breakpoint(1870 down){
+            position: static;
+            margin-left: -18px;
+        }
+        @include breakpoint(small down){
+            width: 55px;
+            margin-left: -16px;
+        }
         &[aria-expanded="true"]{
             .header_hamb{
                 &_icon{
@@ -107,6 +165,9 @@
             stroke: $primary-color;
             stroke-width: 6;
             stroke-linecap: round;
+            @include breakpoint(small down){
+                stroke-width: 3;
+            }
             &--top{
                 stroke-dasharray: 40 139;
             }
@@ -124,6 +185,10 @@
         transition: opacity 250ms, visibility 250ms;
         z-index: 2;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+        @include breakpoint(small down){
+            top: 55px !important;
+            width: 100%;
+        }
         &--main{
             padding: 10px 0 26px;
             border-radius: 0px 0px 10px 0;
@@ -132,6 +197,12 @@
             padding-top: 15px;
             border-radius: 0px 0px 10px 10px;
             max-width: 386px;
+            @include breakpoint(medium down){
+                max-width: 310px;
+            }
+            @include breakpoint(small down){
+                max-width: none;
+            }
         }
         &.is-open{
             visibility: visible;
@@ -142,6 +213,9 @@
         display: flex;
         align-items: center;
         padding: 0 10px 0 35px;
+        @include breakpoint(medium down){
+            padding: 0 20px;
+        }
         .header_avatar{
             flex: 0 0 auto;
         }
@@ -152,6 +226,9 @@
             color: $primary-color;
             font-family: $header-font-family;
             line-height: 1.1;
+            @include breakpoint(medium down){
+                font-size: 16px;
+            }
         }
     }
 }

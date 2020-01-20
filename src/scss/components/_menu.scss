@@ -23,9 +23,16 @@
     &--profile{
         font-size: 24px;
         margin: 22px 0;
+        @include breakpoint(medium down){
+            font-size: 18px;
+            margin: 18px 0;
+        }
         a {
             line-height: 2.62;
             padding: 0 40px;
+            @include breakpoint(medium down){
+                padding: 0 25px;
+            }
             &:hover, &:focus{
                 color:#009fdf;
             }
